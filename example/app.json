@@ -1,0 +1,22 @@
+{
+  "name": "react-native-login-suite-example",
+  "displayName": "LoginSuite Example",
+  "expo": {
+    "name": "react-native-login-suite-example",
+    "slug": "react-native-login-suite-example",
+    "description": "Example app for react-native-login-suite",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
