@@ -18,6 +18,7 @@
     "!**/__tests__"
   ],
   "scripts": {
+    "build": "tsc",
     "test": "jest",
     "typescript": "tsc --noEmit",
     "lint": "eslint --ext .js,.ts,.tsx .",
@@ -45,7 +46,7 @@
     "@react-native-community/eslint-config": "^1.1.0",
     "@release-it/conventional-changelog": "^1.1.4",
     "@types/jest": "^25.2.1",
-    "@types/react": "^16.9.19",
+    "@types/react": "^16.9.35",
     "@types/react-native": "0.62.7",
     "commitlint": "^8.3.5",
     "eslint": "^6.8.0",
@@ -55,7 +56,7 @@
     "jest": "^26.0.1",
     "pod-install": "^0.1.0",
     "prettier": "^2.0.5",
-    "react": "~16.9.0",
+    "react": "^16.9.0",
     "react-native": "~0.61.5",
     "release-it": "^13.5.8",
     "typescript": "^3.8.3"
@@ -127,10 +128,27 @@
     "source": "src",
     "output": "lib",
     "targets": [
-      ["aar", {"reverseJetify": true}],
-      ["commonjs", {"copyFlow": true}],
+      [
+        "aar",
+        {
+          "reverseJetify": true
+        }
+      ],
+      [
+        "commonjs",
+        {
+          "copyFlow": true
+        }
+      ],
       "module",
       "typescript"
     ]
+  },
+  "dependencies": {
+    "@types/react-dom": "^16.9.8",
+    "react-dom": "^16.13.1",
+    "react-native-check-box": "^2.1.7",
+    "react-native-keyboard-aware-scroll-view": "^0.9.1",
+    "react-test-renderer": "^16.13.1"
   }
 }
