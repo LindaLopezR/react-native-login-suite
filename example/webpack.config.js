@@ -12,6 +12,9 @@ module.exports = async function (env, argv) {
     test: /\.(js|ts|tsx)$/,
     include: path.resolve(root, 'src'),
     use: 'babel-loader',
+    options: {
+      fix: true,
+    },
   });
 
   // We need to make sure that only one version is loaded for peerDependencies

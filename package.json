@@ -84,9 +84,14 @@
       "prettier"
     ],
     "rules": {
+      "no-shadow": "off",
       "prettier/prettier": [
         "error",
         {
+          "endOfLine": "crlf",
+          "allow": [
+            "setFilter"
+          ],
           "quoteProps": "consistent",
           "singleQuote": true,
           "tabWidth": 2,
@@ -146,6 +151,7 @@
   },
   "dependencies": {
     "@types/react-dom": "^16.9.8",
+    "@types/react-native-check-box": "^2.1.1",
     "react-dom": "^16.13.1",
     "react-native-check-box": "^2.1.7",
     "react-native-keyboard-aware-scroll-view": "^0.9.1",
