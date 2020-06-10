@@ -1,6 +1,6 @@
 {
   "name": "react-native-login-suite",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Login iGo&amp;Suite",
   "main": "src/index",
   "module": "lib/module/index",
