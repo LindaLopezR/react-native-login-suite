@@ -15,8 +15,28 @@ import LoginSuite from "react-native-login-suite";
 
 // ...
 
-const result = await LoginSuite.multiply(3, 7);
+<LoginSuite
+  logoImg={require('../assets/image.png')}
+  checkBoxLabel="Usuario empresarial"
+  holderCompany="Compañía"
+  holderUsername="Usuario"
+  holderPasword="Contraseña"
+  holderLogin="Entrar"
+  version="Versión 1.0"
+  selectCompany={companyShow}
+  nameStatus={usernameState}
+  passwordStatus={passwordState}
+  companyStatus={companyState}
+  statusCheck={(companyShow) => this.setState({ companyShow })}
+  changeCompany={(companyState) => this.setState({ companyState })}
+  changeUsername={(usernameState) => this.setState({ usernameState })}
+  changePassword={(passwordState) => this.setState({ passwordState })}
+  sendLogin={() => console.log('Guardar!')}
+/>
 ```
+
+![Suite](/src/img/movil1.jpg "Login")
+![Suite2](/src/img/movil2.jpg "Login")
 
 ## Contributing
 

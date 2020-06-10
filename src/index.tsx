@@ -14,7 +14,7 @@ export default class LoginView extends React.Component<Props> {
     const {
       logoImg,
       checkBoxLabel,
-      toggleCompany,
+      statusCheck,
       holderCompany,
       holderUsername,
       holderPasword,
@@ -36,22 +36,19 @@ export default class LoginView extends React.Component<Props> {
           <View style={styles.flexForm}>
             <CheckBox
               style={styles.checkboxStyle}
-              onClick={() => {
-                const newCheck = !this.props.showCompany;
-                toggleCompany(newCheck);
-              }}
-              isChecked={this.props.showCompany}
+              onClick={() => statusCheck()}
+              isChecked={this.props.selectCompany}
               leftText={checkBoxLabel}
             />
 
-            {this.props.showCompany && (
+            {this.props.selectCompany && (
               <TextInput
                 style={styles.input}
                 placeholder={holderCompany}
                 underlineColorAndroid="transparent"
                 multiline={false}
                 onChangeText={(text) => this.props.changeCompany(text)}
-                value={this.props.company}
+                value={this.props.companyStatus}
               />
             )}
 
@@ -61,7 +58,7 @@ export default class LoginView extends React.Component<Props> {
               underlineColorAndroid="transparent"
               multiline={false}
               onChangeText={(text) => this.props.changeUsername(text)}
-              value={this.props.username}
+              value={this.props.nameStatus}
             />
             <TextInput
               style={styles.input}
@@ -70,11 +67,11 @@ export default class LoginView extends React.Component<Props> {
               multiline={false}
               secureTextEntry
               onChangeText={(text) => this.props.changePassword(text)}
-              value={this.props.password}
+              value={this.props.passwordStatus}
             />
             <View style={styles.buttonStart}>
               <Button
-                onPress={this.props.handleLogin}
+                onPress={this.props.sendLogin}
                 title={holderLogin}
                 color="#003D52"
                 textAlign="center"

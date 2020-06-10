@@ -23,15 +23,15 @@ export default class App extends React.Component {
         holderPasword="Contraseña"
         holderLogin="Entrar"
         version="Versión 1.0"
-        showCompany={companyShow}
-        username={usernameState}
-        password={passwordState}
-        company={companyState}
-        toggleCompany={(companyShow) => this.setState({ companyShow })}
+        selectCompany={companyShow}
+        nameStatus={usernameState}
+        passwordStatus={passwordState}
+        companyStatus={companyState}
+        statusCheck={(companyShow) => this.setState({ companyShow })}
         changeCompany={(companyState) => this.setState({ companyState })}
         changeUsername={(usernameState) => this.setState({ usernameState })}
         changePassword={(passwordState) => this.setState({ passwordState })}
-        handleLogin={() => console.log('Guardar!')}
+        sendLogin={() => console.log('Guardar!')}
       />
     );
   }
